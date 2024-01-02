@@ -1,0 +1,302 @@
+body {
+  background-color: #161616;
+  overflow: hidden;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.conteudo {
+  margin: 0;
+  padding: 1rem;
+}
+
+.logofutmeeting {
+  height: 4em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logocalendar:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logofutmeeting.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.logofutmeeting-container {
+  margin-top: 1rem;
+  /* Ajuste conforme necessário para separar a imagem da área de perguntas */
+}
+
+.area-perguntas {
+  height:auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background-color: rgb(30, 104, 214);
+  margin: 5px;
+}
+
+.btn-1 {
+  position: relative;
+  top: 180px;
+  background-color: rgb(116, 116, 116);
+  margin: 2px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-style {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button-group {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.modal {
+  justify-content: left;
+  text-align: left;
+  border: solid 1px;
+  padding: 2em;
+  border-radius: 2em;
+}
+
+.txt-subtitulo {
+  color: rgb(160, 160, 160);
+  font-style: italic;
+}
+
+.icon-remove {
+  width: auto;
+  height: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+}
+
+.image-select-container {
+  text-align: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
+  gap: 1.8em;
+  height: 46vh;
+  width: 80vw;
+  min-width: 65vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 5px;
+  padding-right: 20px;
+}
+
+.image-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.image-grid::-webkit-scrollbar-thumb {
+  background-color: #3498db;
+  border-radius: 5px;
+}
+
+.image-grid::-webkit-scrollbar-track {
+  background-color: #f1f1f123;
+  border-radius: 5px;
+}
+
+.image-item {
+  cursor: pointer;
+  border: 2px solid #ddd;
+  padding: 5px;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  height: 300px;
+  width: 220px;
+
+  &:hover {
+    border-color: #3498db;
+  }
+
+}
+
+.responsavel-area {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-label {
+  margin-top: 5px;
+}
+
+.input-nome-pesquisa{
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  width: 200px;
+  margin-left: 10px;
+}
+.input-nome-pesquisa:focus{
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.selected-images-list {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  height: 100px; /* Ajuste conforme necessário para o tamanho desejado */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.selected-images-list h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.selected-images-list ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Para que os itens quebrem para a próxima linha se não houver espaço suficiente */
+}
+
+.selected-images-list li {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #161616;
+}
+
+.selected-images-list button {
+  background-color: #dc354600;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+  margin-left: 8px;
+}
+
+.selected-images-list button:hover {
+  background-color: #00000000;
+}
+.btn-remove{
+  height: auto;
+  width: 20px;
+}
+
+/* Estilo para a tabela */
+table {
+  width: 50vw;
+}
+
+/* Estilo para os cabeçalhos da tabela */
+th {
+  background-color: #363535;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Estilo para as células da tabela */
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ffffff;
+}
+
+/* Estilo para linhas ímpares da tabela */
+tr:nth-child(odd) {
+  background-color: #1e1d1f;
+}
+
+/* Estilo para linhas pares da tabela */
+tr:nth-child(even) {
+  background-color: #1e1d1f;
+}
+
+@media only screen and (max-width: 480px) {
+
+  .area-perguntas {
+    height: 30em;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logocalendar {
+    height: 30em;
+    width: auto;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
